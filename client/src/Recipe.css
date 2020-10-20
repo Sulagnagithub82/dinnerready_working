@@ -1,0 +1,8 @@
+.Recipes{
+  min-height:100vh;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
