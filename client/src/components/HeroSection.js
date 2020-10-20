@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <div className='hero-container'>
       {/* <video src="/videos/video-2.mp4" autoplay loop muted /> */}
-      <h3>Wholesome Meals In a Snap</h3>
+      <h3>Wholesome Meals In a Snap!</h3>
       <p>What are you waiting for</p>
       <div className="hero-btns">
         <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>
