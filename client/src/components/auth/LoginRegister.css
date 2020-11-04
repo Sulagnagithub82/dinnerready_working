@@ -1,13 +1,20 @@
-/* *{
-  background-color: #b7e3f0;
-} */
 
 .container{
-  margin-left: 500px;
-  margin-right: 50px;
-  margin-top: 50px;
+  /* margin-left: 350px; */
+  margin-top: 80px;
 }
-.login{
-  background: #b7e3f0;
+#leftColumn{
+  background-image: url("loginPic.png");
+  width: 400px;
+  height: 300px;
+  /* margin-right: 15px;  */
+}
+#rightColumn{
+  margin-left: 25px;
+  margin-top: 15px;
+}
 
+.column {
+  float: left;
+  /* width: 50%; */
 }

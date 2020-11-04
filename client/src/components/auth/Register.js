@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './register.css';
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -53,98 +54,103 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container">
+      <div className="container" id="register">
         <div className="row">
-          <div className="col s8 offset-s2">
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
-                <b>Register</b> below
-              </h4>
-              <p className="grey-text text-darken-1">
+        <div className="registerBox">
+          <div>
+            <h4><b>Register below </b></h4>
+          </div>
+          <div>
+            <label htmlFor="name">Name</label>
+          </div>
+              <form noValidate onSubmit={this.onSubmit}>
+                <div className="input-field">
+                  <span className="red-text">{errors.name}</span>
+                    <input
+                      onChange={this.onChange}
+                      value={this.state.name}
+                      error={errors.name}
+                      id="name"
+                      type="text"
+                      className={classnames("", {
+                      invalid: errors.name
+                      })}
+                    />
+                </div>
+                <div> 
+                  <label htmlFor="email">Email</label>
+                </div>
+                  <div className="input-field">
+                    <span className="red-text">{errors.email}</span>
+                    <input
+                      onChange={this.onChange}
+                      value={this.state.email}
+                      error={errors.email}
+                      id="email"
+                      type="email"
+                      className={classnames("", {
+                        invalid: errors.email
+                      })}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="password">Password</label>
+                  </div>
+                  <div className="input-field">
+                    <span className="red-text">{errors.password}</span>
+                    <input
+                      onChange={this.onChange}
+                      value={this.state.password}
+                      error={errors.password}
+                      id="password"
+                      type="password"
+                      className={classnames("", {
+                        invalid: errors.password
+                      })}
+                    />
+                  </div>
+                  <div>
+                  <label htmlFor="password2">Confirm Password</label>
+                  </div>
+                  <div className="input-field">
+                    <span className="red-text">{errors.password2}</span>
+                    <input
+                      onChange={this.onChange}
+                      value={this.state.password2}
+                      error={errors.password2}
+                      id="password2"
+                      type="password"
+                      className={classnames("", {
+                        invalid: errors.password2
+                      })}
+                    />
+                  </div>
+                  <div>
+                    <button
+                      style={{
+                        background:"black",
+                        color:"white",
+                        fontSize:"1rem",    
+                        width: "120px",
+                        borderRadius: "3px",
+                        letterSpacing: "1.5px",
+                        marginTop: "1rem"
+                      }}
+                      type="submit"
+                      className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                    >
+                      Sign up
+                    </button>
+                  </div>
+                </form>
+            <div>
+            <p>
                 Already have an account? <Link to="/signin">Log in</Link>
-              </p>
-            </div>
-            <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field col s12">
-                <label htmlFor="name">Name-</label>
-                <span className="red-text">{errors.name}</span>
-                <input
-                  onChange={this.onChange}
-                  value={this.state.name}
-                  error={errors.name}
-                  id="name"
-                  type="text"
-                  className={classnames("", {
-                    invalid: errors.name
-                  })}
-                />
-
-              </div>
-              <div className="input-field col s12">
-                <label htmlFor="email">Email-</label>
-                <span className="red-text">{errors.email}</span>
-                <input
-                  onChange={this.onChange}
-                  value={this.state.email}
-                  error={errors.email}
-                  id="email"
-                  type="email"
-                  className={classnames("", {
-                    invalid: errors.email
-                  })}
-                />
-
-              </div>
-              <div className="input-field col s12">
-                <label htmlFor="password">Password-</label>
-                <span className="red-text">{errors.password}</span>
-                <input
-                  onChange={this.onChange}
-                  value={this.state.password}
-                  error={errors.password}
-                  id="password"
-                  type="password"
-                  className={classnames("", {
-                    invalid: errors.password
-                  })}
-                />
-
-              </div>
-              <div className="input-field col s12">
-                <label htmlFor="password2">Confirm Password-</label>
-                <span className="red-text">{errors.password2}</span>
-                <input
-                  onChange={this.onChange}
-                  value={this.state.password2}
-                  error={errors.password2}
-                  id="password2"
-                  type="password"
-                  className={classnames("", {
-                    invalid: errors.password2
-                  })}
-                />
-              </div>
-              <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-                <button
-                  style={{
-                    background:"black",
-                    color:"white",
-                    fontSize:"1rem",    
-                    width: "120px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px",
-                    marginTop: "1rem"
-                  }}
-                  type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                >
-                  Sign up
-                </button>
-              </div>
-            </form>
+            </p>
+          </div>
+          </div>
           </div>
         </div>
-      </div>
     );
   }
 }

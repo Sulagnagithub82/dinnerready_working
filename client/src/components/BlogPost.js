@@ -44,6 +44,7 @@ const PostMessages = ({ classes, ...props }) => {
 
     return (
         <Grid container>
+
             <Grid item xs={5}>
                 <Paper className={classes.paper}>
                     <PostMessageForm {...{ currentId, setCurrentId }} />
@@ -55,7 +56,7 @@ const PostMessages = ({ classes, ...props }) => {
                         {
                             props.postMessageList.map((record, index) => {
                                 return (
-                                    <Fragment key={index}>
+                                    <Fragment key={index} id="blogPost">
                                         <ListItem>
                                             <ListItemText>
                                                 <Typography variant="h5">

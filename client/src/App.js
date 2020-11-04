@@ -58,7 +58,7 @@ render(){
         <Route path='/sign-up' component={SignUp} />
         <Route path='/signin' component={SignIn} />
         <Route path='/recipe' component={Recipes} />
-        <Route path='/allrecipes' component={AllRecipes} 
+        <Route path='/allrecipes/:id' component={AllRecipes} 
         />
         {/* <Route exact path='/' component={PostMessages} /> */}
 

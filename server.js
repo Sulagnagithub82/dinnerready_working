@@ -54,6 +54,7 @@ app.use(passport.initialize());
 // Routes
 app.use("/api/users", users);
 app.use("/api/recipes", recipes);
+app.use("/api/recipes/id", recipes);
 app.use("/api/blog", blog);
 
 

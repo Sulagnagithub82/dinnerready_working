@@ -8,7 +8,6 @@ import Footer from '../Footer';
 const Signin = () => {
   return (
     <div>
-      {/* <Navbar /> */}
       <LogIn />
       <Footer />
 

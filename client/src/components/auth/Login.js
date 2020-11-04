@@ -55,19 +55,18 @@ class Login extends Component {
 
     return (
       <div className="login" className="container">
-        <div style={{ marginTop: "4rem" }} className="row">
-          <div className="col s8 offset-s2">
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+        <div  className="row">
+        <div className="column" id="leftColumn"></div>
+        <div className="column" id="rightColumn">
+          <div>
               <h4>
-                <b>Login</b> below
+                <b>Login below </b>
               </h4>
-              <p className="grey-text text-darken-1">
-                Don't have an account? <Link to="/sign-up">Register</Link>
-              </p>
+            <div>
+            <label htmlFor="email">Email</label>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
               <div className="input-field">
-                <label htmlFor="email">Email-</label>
                 <span className="red-text">
                   {errors.email}
                   {errors.emailnotfound}
@@ -84,8 +83,8 @@ class Login extends Component {
                 />
 
               </div>
+              <div><label htmlFor="password">Password</label></div>
               <div className="input-field">
-                <label htmlFor="password">Password-</label>
                 <span className="red-text">
                   {errors.password}
                   {errors.passwordincorrect}
@@ -102,7 +101,7 @@ class Login extends Component {
                 />
 
               </div>
-              <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+              <div>
                 <button
                   style={{
                     background:"black",
@@ -118,8 +117,20 @@ class Login extends Component {
                 >
                   Login
                 </button>
+                </div>
+                <div>
+                <p className="grey-text text-darken-1"
+                style={{
+                  marginTop: "1rem"
+                }}
+                >
+                Want to <Link to="/sign-up">Register?</Link>
+              </p>
+
               </div>
             </form>
+            
+          </div>
           </div>
         </div>
       </div>

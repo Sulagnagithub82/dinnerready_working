@@ -1,0 +1,20 @@
+/* *{
+  background-color: #b7e3f0;
+} */
+
+.container{
+  margin-left: 450px;
+  /* margin-right: 50px;  */
+  margin-top: 80px;
+}
+
+#register{
+  background-image: url("registerBackground.jpg");
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+}
+.registerBox{
+  margin-left: 180px;
+  margin-top: 80px;
+}

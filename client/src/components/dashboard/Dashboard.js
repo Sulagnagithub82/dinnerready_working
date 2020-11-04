@@ -3,7 +3,7 @@ import './Dashboard.css';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import { black } from "color-name";
+// import { black } from "color-name";
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -15,14 +15,14 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
 
     return (
-      <div  className="container valign-wrapper">
+      <div  className="container">
         <div className="row">
-          <div className="landing-copy col s12 center-align">
+          <div>
           <div className="message">
             <h4>
-              <b>Hey </b> {user.name.split(" ")[0]}
-              <p className="flow-text grey-text text-darken-1">
-                You are successfully logged into your Dinner Ready Profile{" "}
+              <b>Hey </b> {user.name.split(" ")[0]},
+              <p>
+                You are successfully logged into your Dinner Ready Profile!!{" "}
               </p>
             </h4>
             

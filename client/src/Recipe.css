@@ -1,8 +1,35 @@
 .Recipes{
   min-height:100vh;
-  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);  justify-content: space-around;
+  background-image: linear-gradient(to top, #40546b 0%, #e7f0fd 100%);  justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
+}
+a{
+  color:rgb(151, 134, 134);
+  font-size: 1.2em;
+}
+:hover{
+  color:rgb(84, 58, 58);
+}
+a:link {
+  text-decoration: none;
+}
+h3 {
+  font-size: 1.4em;
+  text-decoration: underline;
 
+}
+
+.flex-container{
+  display: flex;
+  height: 1000px;
+  background-color: rgb(220, 246, 220);
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 250px; */
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 1.2em;
 
 }

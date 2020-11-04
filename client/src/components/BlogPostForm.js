@@ -78,6 +78,7 @@ const PostMessageForm = ({ classes, ...props }) => {
     }
 
     return (
+        <div classname="blogPost">
         <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`}
             onSubmit={handleSubmit}>
             <TextField
@@ -108,6 +109,7 @@ const PostMessageForm = ({ classes, ...props }) => {
                 className={classes.postBtn}
             >Submit</Button>
         </form>
+    </div>
     );
 }
 

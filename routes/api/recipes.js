@@ -20,16 +20,38 @@ router.get('/', async (req, res) => {
       res.json({ message: error });
   }
 });
-//Get recipe by id
-router.get('/:id', async (req, res) => {
-  try {
-      let allrecipes = await Recipe.findById(req.params.id).exec();
-      res.json(allrecipes);
-  } catch (error) {
-      res.json({ message: error });
-  }
-});
+//Get recipe by id,id=${id}&type=single
+// router.get('/:id', async (req, res) => {
+//   Recipe.findById(req.params.id)
+//   // console.log("Inside find by id")
+//   .then(doc =>{
+//     if (!doc) {return res.status(404).end();}
+//     return res.status(200).json(doc);
+//   })
+//   .catch(err => next(err));
+// })
 
 //Recipe.findOne();
+//recipes_by_id?id=${id}&type=single
+router.get("/:id", (req, res)=> {
+  let type = req.query.type
+  let ids = req.query.id
+
+  if (type === "array") {
+    let ids = req.query.id.split(',');
+    ids = [];
+    ids = ids.map(item => {
+      return item
+    })
+
+
+  }
+  Recipe.find({'_id': { $in: ids } })
+    .populate('writer')
+    .exec((err,recipe) => {
+      if(err) return req.status(400).send(err)
+      return res.status(200).send(recipe)
+    })
+})
 
 module.exports = router;
