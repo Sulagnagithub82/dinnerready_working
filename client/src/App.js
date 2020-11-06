@@ -22,6 +22,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
+import UsingAjax from './components/AjaxApi';
 // import BlogPost from './components/BlogPost';
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -58,8 +59,9 @@ render(){
         <Route path='/sign-up' component={SignUp} />
         <Route path='/signin' component={SignIn} />
         <Route path='/recipe' component={Recipes} />
-        <Route path='/allrecipes/:id' component={AllRecipes} 
-        />
+        <Route path='/allrecipes/:id' component={AllRecipes}/> 
+        <Route path='/usingajax' component={UsingAjax}/> 
+
         {/* <Route exact path='/' component={PostMessages} /> */}
 
 

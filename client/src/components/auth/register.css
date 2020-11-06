@@ -12,9 +12,12 @@
   background-image: url("registerBackground.jpg");
   background-repeat: no-repeat;
   width: 500px;
-  height: 500px;
+  height: 550px;
 }
 .registerBox{
   margin-left: 180px;
   margin-top: 80px;
+}
+.redtext{
+  font:red;
 }

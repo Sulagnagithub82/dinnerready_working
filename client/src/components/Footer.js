@@ -64,15 +64,15 @@ function Footer() {
         <div className='social-media-wrap'>
           <div className='footer-logo'>
             <Link to='/' className='social-logo'>
-              TRVL
+              DR
               <i className='fab fa-typo3' />
             </Link>
           </div>
-          <small className='website-rights'>TRVL © 2020</small>
+          <small className='website-rights'>DR © 2020</small>
           <div className='social-icons'>
             <Link
               className='social-icon-link facebook'
-              to='/'
+              to='https://www.facebook.com/'
               target='_blank'
               aria-label='Facebook'
             >
@@ -80,7 +80,7 @@ function Footer() {
             </Link>
             <Link
               className='social-icon-link instagram'
-              to='/'
+              to='https://www.instagram.com/'
               target='_blank'
               aria-label='Instagram'
             >
@@ -88,7 +88,7 @@ function Footer() {
             </Link>
             <Link
               className='social-icon-link youtube'
-              to='/'
+              to='https://www.youtube.com/'
               target='_blank'
               aria-label='Youtube'
             >
@@ -96,7 +96,7 @@ function Footer() {
             </Link>
             <Link
               className='social-icon-link twitter'
-              to='/'
+              to='https://twitter.com/?lang=en'
               target='_blank'
               aria-label='Twitter'
             >
@@ -104,7 +104,7 @@ function Footer() {
             </Link>
             <Link
               className='social-icon-link twitter'
-              to='/'
+              to='https://www.linkedin.com/'
               target='_blank'
               aria-label='LinkedIn'
             >

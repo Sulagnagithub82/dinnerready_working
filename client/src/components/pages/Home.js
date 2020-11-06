@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import HeroSection from '../HeroSection';
-import Cards from '../Cards';
+// import Cards from '../Cards';
 import Footer from '../Footer';
 import PostMessages from '../BlogPost';
 import {Provider} from 'react-redux';
@@ -17,7 +17,7 @@ function Home () {
  
         <Provider store={store}>
           <Container maxWidth="lg">
-          <h4> Share your valuable feedback</h4>
+          <h4 style={{ textAlign: "center", paddingTop: 15 }}> Share your valuable feedback</h4>
           <PostMessages/>
           </Container>
         </Provider> 

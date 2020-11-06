@@ -5,6 +5,7 @@ import { Grid, Paper, withStyles, List, ListItem, ListItemText, Typography, Divi
 import PostMessageForm from "./BlogPostForm";
 import ButterToast, { Cinnamon } from "butter-toast";
 import { DeleteSweep } from "@material-ui/icons";
+import { v4 as uuidv4 } from 'uuid';
 
 const styles = theme => ({
     paper: {
@@ -22,7 +23,8 @@ const styles = theme => ({
 const PostMessages = ({ classes, ...props }) => {
     // const {classes, ...props} = props
     const [currentId, setCurrentId] = useState(0)
-
+    const randomid=uuidv4();
+    console.log(randomid);
     useEffect(() => {
         props.fetchAllPostMessages()
     }, [])//DidMount
@@ -56,11 +58,11 @@ const PostMessages = ({ classes, ...props }) => {
                         {
                             props.postMessageList.map((record, index) => {
                                 return (
-                                    <Fragment key={index} id="blogPost">
+                                    <Fragment key={index}>
                                         <ListItem>
-                                            <ListItemText>
+                                            <ListItemText >
                                                 <Typography variant="h5">
-                                                    {record.title}
+                                                    {record.title}{record.index}
                                                 </Typography>
                                                 <div>
                                                     {record.message}

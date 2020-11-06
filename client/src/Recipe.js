@@ -23,11 +23,12 @@ import style from './recipe.module.css';
 import { Image, Transformation } from 'cloudinary-react';
 
 
-const Recipe = ({_id,title,image,description,CookingTime,imageId}) => { 
+const Recipe = ({_id,title,image,description,CookingTime,imageId}) => {
+   // const _id= ObjectId();
     return(
        <div className="Recipe">
        <div key={_id} className={style.recipes}>
-          <h3 style={{backgroundColor: "lightblue"}}>{title}</h3>
+          <h3 >{title}</h3>
           {/* <p>{_id}</p>
           <p>{image}</p> */}
           <Image
@@ -37,6 +38,7 @@ const Recipe = ({_id,title,image,description,CookingTime,imageId}) => {
                style={{ margin: "10px" }}>
                <Transformation quality="auto" />
          </Image>
+         {/* <p>ID:{ObjectId({_id}).toString()}</p> */}
           <p>Description:{description}</p>
           <p>Cooking Time:{CookingTime}</p>
 

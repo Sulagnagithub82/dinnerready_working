@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const ObjectID = require('mongoose').Types.ObjectId;
 
+
 // Load Blog model
 const Blog = require("../../models/Blog");
 
@@ -14,6 +15,7 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   const newEntry = new Blog({
+    // _id:uuid,
     title: req.body.title,
     message: req.body.message
   })

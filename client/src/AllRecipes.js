@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import Recipe from './Recipe';
+// import Recipe from './Recipe';
 import Axios from 'axios';
-import AllRecipe from './AllRecipe';
+// import AllRecipe from './AllRecipe';
 import {Button} from'./components/Button';
 
 import './Recipe.css';
-import { Image, Transformation } from 'cloudinary-react';
+// import { Image, Transformation } from 'cloudinary-react';
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
-import { CloudinaryContext } from "cloudinary-react";
+// import { CloudinaryContext } from "cloudinary-react";
 
 function AllRecipes(props){
   const id = props.match.params.id
@@ -81,4 +81,3 @@ useEffect(()=> {
      
        
 export default AllRecipes;
-        {/* <button onClick={()=> setModalIsOpen(true)}>open</button> */}

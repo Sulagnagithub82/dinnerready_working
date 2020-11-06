@@ -50,8 +50,8 @@ function Navbar() {
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
-                  How It Works
+                <Link to='./usingajax' className='nav-links' onClick={closeMobileMenu}>
+                  Random Pictures
                 </Link>
               </li>
               {/* <li className='nav-item'>

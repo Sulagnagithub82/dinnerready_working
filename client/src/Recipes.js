@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Recipe from './Recipe';
 import {Link} from 'react-router-dom';
-import AllRecipes from './AllRecipes';
+// import AllRecipes from './AllRecipes';
 
 import './Recipe.css';
 import { CloudinaryContext } from "cloudinary-react";
@@ -35,10 +35,10 @@ const getRecipes = async () => {
             {recipes.map((recipes,_id) => 
             <li key={recipes._id}>
             <div>                    
-            <Link to={'/allrecipes/'+recipes._id}>{recipes.title }
+            <Link to={'/allrecipes/'+recipes._id}>
             <Recipe 
-            // key={recipes._id}
-            // title={recipes.title } 
+            objectId={recipes._id}
+            title={recipes.title }
             imageId={recipes.image}
             description={recipes.description}
             CookingTime={recipes.CookingTime}/>
